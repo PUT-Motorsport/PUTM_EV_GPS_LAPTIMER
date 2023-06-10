@@ -32,12 +32,6 @@ class Point{
     }
     bool Exists()
     {
-        if(this == 0x0){
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (this == 0x0 ? true : false);
     }
 };

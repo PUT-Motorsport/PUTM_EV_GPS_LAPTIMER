@@ -1,0 +1,8 @@
+float32 lap_time
+float32 acc_time
+float32 skidpad_time
+float32 sector1_time
+float32 sector2_time
+float32 sector3_time
+float32 delta
+float32 live_delta

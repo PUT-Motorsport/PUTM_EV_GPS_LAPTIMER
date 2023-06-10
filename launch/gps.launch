@@ -1,0 +1,3 @@
+<launch>
+  <node name="PUTM_EV_GPS_LAPTIMER_node" pkg="PUTM_EV_GPS_LAPTIMER" type="PUTM_EV_GPS_LAPTIMER_node" output="screen"/>  
+</launch>

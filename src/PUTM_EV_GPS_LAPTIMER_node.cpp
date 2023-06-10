@@ -5,11 +5,20 @@
 #include "../include/Point.hpp"
 #include "../include/GPS.hpp"
 
-Point StartFinishLine(0,0);
+Point *StartFinishLine;
 
 void PositionCallback(const sensor_msgs::NavSatFixPtr& location)
 {
     ROS_INFO("Current position: %f, %f", location->latitude, location->longitude);
+    if(StartFinishLine->Exists()){
+        StartFinishLine = new Point(location->latitude, location->longitude);
+        return;
+    }
+    else
+    {
+        Point new_position(location->latitude, location->longitude);
+        if(new_position.IsInCircle(*(StartFinishLine)));
+    }
 }
 
 int main(int argc, char *argv[])
@@ -23,6 +32,5 @@ int main(int argc, char *argv[])
         ros::Duration(0.5).sleep();
         ros::spin();
     }
-
     return 0;
 } 

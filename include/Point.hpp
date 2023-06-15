@@ -4,9 +4,11 @@ constexpr float  BOLID_RADIUS = 0.000015;   // Radius of point around bolid in s
 
 class Point{
     private:
-    float latitude;
-    float longitude;
-    float radius;
+    
+        float latitude;
+        float longitude;
+        float radius;
+
     public:
 
     Point(float _latitude, float _longitude) : latitude(_latitude) ,longitude(_longitude), radius(BOLID_RADIUS){}

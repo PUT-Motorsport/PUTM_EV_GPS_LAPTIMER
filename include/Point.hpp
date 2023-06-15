@@ -19,9 +19,9 @@ class Point{
     {
         return (latitude == 0) || (longitude == 0);
     }
-    bool IsInCircle(const Point point)
+    bool IsInCircle(const GPS::Position raw_position)
     {
-        if(IsInBounds(latitude, point.latitude-point.radius, point.latitude+point.radius) && IsInBounds(longitude, point.longitude-point.radius, point.longitude+point.radius))
+        if(IsInBounds(latitude, raw_position.latitude-radius, raw_position.latitude+radius) && IsInBounds(longitude, raw_position.longitude-radius, raw_position.longitude+radius))
         {
             return true;
         }

@@ -2,7 +2,13 @@ cmake_minimum_required(VERSION 3.0.2)
 project(PUTM_EV_GPS_LAPTIMER)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+
+add_compile_options(-std=c++17)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# add_compile_options(-std=c++2a)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -150,6 +156,8 @@ add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catk
 target_link_libraries(${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
 )
+
+set_property(TARGET ${PROJECT_NAME}_node PROPERTY CXX_STANDARD 20)
 
 #############
 ## Install ##

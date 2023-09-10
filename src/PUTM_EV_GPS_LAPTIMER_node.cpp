@@ -5,8 +5,10 @@
 #include "../include/Point.hpp"
 #include "../include/GPS.hpp"
 #include "../include/Track.hpp"
+#include "../include/FSM/FSM.hpp"
 
 GPS::Position current_position;
+connection_fsm FSM;
 
 void PositionCallback(const geometry_msgs::Vector3Stamped& location)
 {

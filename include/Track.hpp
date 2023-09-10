@@ -18,7 +18,7 @@ class Track{
                 std::string get;
                 std::cin >> get;
                 Point new_point(current_position.latitude, current_position.longitude);
-                    Points.push_back(new_point);}
+                    Points.push_back(new_point);
             }
         } 
         else if(run == "acc")
@@ -29,7 +29,8 @@ class Track{
         {
 
         }
-        else{
+        else
+        {
             ROS_INFO("Invalid run name!");
         }
     }

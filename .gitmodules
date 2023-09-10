@@ -1,0 +1,3 @@
+[submodule "include/sml2"]
+	path = include/sml2
+	url = https://github.com/boost-ext/sml2.git
